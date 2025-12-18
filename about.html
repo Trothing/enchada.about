@@ -1,0 +1,156 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>About | DOM</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/about/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/about/fontello.css' %}">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__inner">
+        <a href="{% url 'home' %}" class="header__inner-home">
+            <span class="meddon">ED</span> Evgenii DOM
+        </a>
+
+        <ul class="header__inner-list hidden-mobile">
+            <li class="line"><a href="{% url 'services' %}">Services</a></li>
+            <li class="line"><a href="{% url 'about' %}">About</a></li>
+            <li class="line"><a href="{% url 'project' %}">Project</a></li>
+            <li class="line"><a href="{% url 'contact' %}">Contact</a></li>
+            <li>
+                <a href="{% url 'hireme' %}" class="header__inner-list-btn">
+                    Hire me
+                </a>
+            </li>
+        </ul>
+
+        <button class="burger visible-mobile" type="button" id="burgerButton">
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<section class="introduce">
+    <div class="introduce__inner">
+        <h1 class="introduce__title">About</h1>
+        <div class="introduce__short-text">
+            I am a Full-Stack Developer with nearly three years of experience building clean,
+            efficient, and scalable web solutions. I combine precise layout implementation with
+            solid backend architecture and modern frontend logic. My approach is simple:
+            deliver fast, reliable, and production-ready results.
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <div class="skills__inner">
+
+        <ul class="skills__hard">
+            <div class="skills__hard-title">Hard skills</div>
+            <p class="skills__hard-item">HTML (HTML5), EJS, JSX</p>
+            <p class="skills__hard-item">CSS (CSS3), SASS (SCSS), Bootstrap</p>
+            <p class="skills__hard-item">JavaScript (ES6+, OOP)</p>
+            <p class="skills__hard-item">React</p>
+            <p class="skills__hard-item">Git, Figma</p>
+            <p class="skills__hard-item">Python</p>
+            <p class="skills__hard-item">Django, Django REST Framework</p>
+            <p class="skills__hard-item">English level — B1</p>
+        </ul>
+
+        <div class="skills__soft">
+            <div class="skills__soft-title">Soft skills</div>
+            <p class="skills__soft-item">Strong team player with experience working alongside designers, managers, and developers</p>
+            <p class="skills__soft-item">High attention to detail and accuracy in technical requirements</p>
+            <p class="skills__soft-item">Strong sense of responsibility and meeting deadlines</p>
+            <p class="skills__soft-item">Clear and effective communication of ideas and questions</p>
+            <p class="skills__soft-item">Commitment to code quality and adherence to coding standards</p>
+            <p class="skills__soft-item">Ability to resolve conflicts calmly and constructively</p>
+            <p class="skills__soft-item">Continuous self-improvement and motivation to learn new technologies</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="doing">
+    <div class="doing__inner">
+
+        <div class="doing__title">What I Do?</div>
+        <div class="doing__text">
+            I work across the entire web stack and can take responsibility for frontend development,
+            backend development, or complete full-stack solutions. My workflow covers everything
+            from page layout and frontend logic to backend architecture and production deployment.
+        </div>
+
+        <div class="doing__wrapper">
+            <button class="doing__button doing__button-left visible-mobile">❮</button>
+
+            <div class="doing__container">
+
+                <div class="doing__block">
+                    <i class="icon-html5 doing__block_image"></i>
+                    <div class="doing__block_title">Frontend Development</div>
+                    <div class="doing__block_text">
+                        I implement frontend systems with a strong focus on stability,
+                        predictable behavior, and clean architecture, ensuring that the
+                        interface works reliably under real-world conditions.
+                    </div>
+                </div>
+
+                <div class="doing__block">
+                    <i class="icon-server doing__block_image"></i>
+                    <div class="doing__block_title">Backend Development</div>
+                    <div class="doing__block_text">
+                        I engineer backend solutions with well-structured architecture,
+                        secure data handling, and scalable APIs that form the foundation
+                        of robust web applications.
+                    </div>
+                </div>
+
+                <div class="doing__block">
+                    <i class="icon-rocket doing__block_image"></i>
+                    <div class="doing__block_title">Full-Stack Development</div>
+                    <div class="doing__block_text">
+                        I integrate frontend and backend engineering into complete,
+                        production-ready systems — building the full logic, infrastructure,
+                        and deployment pipeline from the ground up.
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="doing__button doing__button-right visible-mobile">❯</button>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer__inner">
+        <p class="footer__copy">© 2025 Evgenii DOM. All rights reserved.</p>
+        <div class="footer__links">
+            <a href="https://github.com/Trothing" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/evgenii-baranchuk-a47baa3a0/" target="_blank">LinkedIn</a>
+            <a href="https://t.me/EvheniiDOM" target="_blank">Telegram</a>
+            <a href="mailto:ring.ads.post@gmail.com">Email</a>
+        </div>
+    </div>
+</footer>
+
+<div class="overlay" id="mobileOverlay">
+    <ul class="overlay__list">
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'project' %}">Project</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'hireme' %}">Hire me</a></li>
+    </ul>
+</div>
+
+<script src="{% static 'main/js/about/script.js' %}"></script>
+</body>
+</html>
